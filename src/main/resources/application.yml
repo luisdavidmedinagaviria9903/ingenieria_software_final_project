@@ -5,9 +5,9 @@ spring:
     allow-bean-definition-overriding: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/finalproyect?useSSL=false&serverTimezone=America/Bogota&useLegacyDatetimeCode=false
-    username: admin
-    password: admin
+    url: jdbc:mysql://localhost:3306/final_project_demo?useSSL=false&serverTimezone=America/Bogota&useLegacyDatetimeCode=false
+    username: root
+    password:
     hikari:
       data-source-properties:
         connectionTimeout: 30000
@@ -36,3 +36,5 @@ spring:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+server:
+  port: 8081
