@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "condiciones_salud")
@@ -22,9 +23,19 @@ public class HealthCondition implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "user")
-    private User user;
+    @Column(name = "user")
+    private Long user;
+
+    @Column(name = "sickness_code")
+    private Long sicknessCode;
+
+    @Column(name = "creation_date")
+    private LocalDateTime creationDate;
+
+    @Column(name = "is_family")
+    private Boolean isFamily;
+
+
 
 
 }
